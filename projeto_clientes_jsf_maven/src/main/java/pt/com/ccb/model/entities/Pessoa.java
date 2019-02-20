@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -46,6 +47,7 @@ public class Pessoa implements Serializable{
 
     @ManyToOne(optional = false)
     @ForeignKey(name="PessoaSexo")
+    @JoinColumn(name="IdSexo", referencedColumnName = "IdSexo")
     private Pessoa pessoa;
     
     public Pessoa() {
